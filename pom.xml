@@ -1,11 +1,31 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.example</groupId>
   <artifactId>maven-test</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.2-SNAPSHOT</version>
   <name>Archetype - maven-test</name>
   <url>http://maven.apache.org</url>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>3.0.0-M1</version>
+                <configuration>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <useReleaseProfile>false</useReleaseProfile>
+                    <releaseProfiles>release</releaseProfiles>
+                    <goals>deploy</goals>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <scm>
+        <connection>scm:git:https://github.com/Rocky23318dd/maven-test.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/Rocky23318dd/maven-test.git</developerConnection>
+        <url>https://github.com/Rocky23318dd/maven-test</url>
+        <tag>maven-test-1.1.1</tag>
+    </scm>
     <dependencies>
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -61,11 +81,10 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.12.0</version>
         </dependency>
-        //公司内部依赖
         <dependency>
             <groupId>com.vitalgateway.common</groupId>
             <artifactId>common-utils</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0</version>
         </dependency>
         <dependency>
             <groupId>com.ddm</groupId>
@@ -75,9 +94,9 @@
     </dependencies>
     <distributionManagement>
         <repository>
-            <id>target-factory</id>
-            <name>test-test</name>
-            <url>https://test-296062553964.d.codeartifact.ap-northeast-1.amazonaws.com/maven/test/</url>
+            <id>${env.REPOSITORY_ID}</id>
+            <name>${env.REPOSITORY_NAME}</name>
+            <url>${env.REPOSITORY_URL}</url>
         </repository>
     </distributionManagement>
 </project>
