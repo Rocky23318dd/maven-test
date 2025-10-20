@@ -1,9 +1,8 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.example</groupId>
   <artifactId>maven-test</artifactId>
-  <version>1.1.1-SNAPSHOT</version>
+  <version>1.1.1</version>
   <name>Archetype - maven-test</name>
   <url>http://maven.apache.org</url>
     <build>
@@ -25,7 +24,7 @@
         <connection>scm:git:https://github.com/Rocky23318dd/maven-test.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/Rocky23318dd/maven-test.git</developerConnection>
         <url>https://github.com/Rocky23318dd/maven-test</url>
-        <tag>HEAD</tag>
+        <tag>maven-test-1.1.1</tag>
     </scm>
     <dependencies>
         <dependency>
@@ -85,7 +84,7 @@
         <dependency>
             <groupId>com.vitalgateway.common</groupId>
             <artifactId>common-utils</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>com.ddm</groupId>
