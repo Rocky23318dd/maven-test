@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.example</groupId>
   <artifactId>maven-test</artifactId>
-  <version>1.1.1</version>
+  <version>1.1.2-SNAPSHOT</version>
   <name>Archetype - maven-test</name>
   <url>http://maven.apache.org</url>
     <build>
@@ -84,7 +84,7 @@
         <dependency>
             <groupId>com.vitalgateway.common</groupId>
             <artifactId>common-utils</artifactId>
-            <version>1.0.0</version>
+            <version>1.0</version>
         </dependency>
         <dependency>
             <groupId>com.ddm</groupId>
